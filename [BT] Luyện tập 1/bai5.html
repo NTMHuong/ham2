@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["UrsaMinor", "Tarurus", "Cygnus", 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+
+    let a = prompt("nhap ten ngoi sao", '');
+    function checkStar(str){
+        for(let i = 0; i < star1.length; i++){
+            if(str === star1[i]){
+                return star2[i];
+            }
+        }
+        return alert("khong tim thay ngoi sao nao");
+    }
+    alert(checkStar(a));
+</script>
+</body>
+</html>

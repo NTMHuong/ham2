@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<form>
+    <p>
+        <h3> Chuyển đổi từ foot sang meter:</h3>
+        <input type="number", id="inputfoot"
+        oninput="footToMeter(this.value)"
+        onchange="footToMeter(this.value)">
+
+        <span id="outputMeter"></span>
+    </p>
+    <p>
+        <h3>Chuyển đổi từ meter sang foot:</h3>
+        <input type="number", id="inputmeter"
+               oninput="meterToFoot(this.value)"
+               onchange="meterToFoot(this.value)">
+        <span id="outputFoot"></span>
+    </p>
+</form>
+
+
+
+<script>
+    function footToMeter(foot){
+        foot = parseFloat(foot);
+        document.getElementById("outputMeter").innerHTML = "foot = " + 0.305 * foot + " meter";
+    }
+    function meterToFoot(meter){
+        meter = parseFloat(meter);
+        document.getElementById("outputFoot").innerHTML = "meter = " + 3.279 * meter + " foot";
+    }
+
+
+
+
+</script>
+</body>
+</html>
+
+<!--<input type="number" id="num">-->
+<!--<select id="v">-->
+<!--    <option value="1">-->
+<!--        Meters to feet-->
+<!--    </option>-->
+<!--    <option value="2">-->
+<!--        Feet to meters-->
+<!--    </option>-->
+<!--</select>-->
+<!--<button onclick="covert()">Convert</button>-->
+<!--<br>-->
+<!--<p id="result"></p>-->
+
+<!--<script>-->
+<!--    function Feettometer(feet) {-->
+<!--        let meter;-->
+<!--        return meter = 0.305 * feet;-->
+<!--    }-->
+<!--    function metertofeet(meter) {-->
+<!--        let feet;-->
+<!--        return feet = 3.279 * meter;-->
+<!--    }-->
+<!--    function covert() {-->
+<!--        let ste = document.getElementById("num").value;-->
+<!--        let step = document.getElementById("v").value;-->
+<!--        if (step == 1) {-->
+<!--            let a = Feettometer(ste);-->
+<!--            document.getElementById("result").innerHTML = a;-->
+<!--        } else {-->
+<!--            let b = metertofeet(step);-->
+<!--            document.getElementById("result").inneHTML = b;-->
+<!--        }-->
+<!--    }-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
